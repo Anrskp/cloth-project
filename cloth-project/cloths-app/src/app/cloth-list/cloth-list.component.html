@@ -1,0 +1,31 @@
+<div>
+    <h2>Cloth List</h2>
+    <ul>
+      <li *ngFor="let cloth of cloths">
+        {{ cloth.name }} - {{ cloth.size }} - {{ cloth.color }}
+      </li>
+    </ul>
+  </div>
+  
+  <div>
+    <h2>Add New Cloth</h2>
+    <form (ngSubmit)="addCloth()">
+      <label>
+        Name:
+        <input [(ngModel)]="newCloth.name" name="name" required>
+      </label>
+      <br>
+      <label>
+        Size:
+        <input [(ngModel)]="newCloth.size" name="size" required>
+      </label>
+      <br>
+      <label>
+        Color:
+        <input [(ngModel)]="newCloth.color" name="color" required>
+      </label>
+      <br>
+      <button type="submit">Add Cloth</button>
+    </form>
+  </div>
+  
